@@ -19,9 +19,7 @@ def get_seat_id(ticket):
 seat_ids = [get_seat_id(t) for t in tickets]
 
 # first part
-max(seat_ids)
+print(max(seat_ids))
 
 # second part
-for i in range(min(seat_ids), max(seat_ids)):
-    if i not in seat_ids:
-        print(str(i) + ' is my seat!')
+print(set(range(min(seat_ids), max(seat_ids)+1)).symmetric_difference(seat_ids))

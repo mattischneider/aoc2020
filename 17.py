@@ -61,12 +61,10 @@ class ConwayCube:
         for d in range(self.number_of_dimensions):
             spreads[d] = self.get_next_spreading(d)
         new_active_cubes = []
-        c = 0
         for p in itertools.product(*[spreads[d] for d in range(self.number_of_dimensions)]):
             v = [i for i in p]
             if self.get_new_status(v) == 'active':
                 new_active_cubes.append(v)
-            c += 1
         self.active_cubes = new_active_cubes
 
 

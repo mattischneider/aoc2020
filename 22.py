@@ -71,7 +71,6 @@ with open(FILE_NAME, 'r') as f:
     p1_start_cards = [int(i) for i in p1[1:]]
     p2 = p2.splitlines()
     p2_start_cards = [int(i) for i in p2[1:]]
-    pass
 
 
 # part1
